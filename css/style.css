@@ -36,6 +36,8 @@ label {
     align-items: center;
 }
 
+/*Fra switch til slider round css delen har jeg funnet noen tips fra w3schools og OpenAi, men har
+ikke brukt de helt riktig måte eller klarte ikke å få de endringene ser ut som jeg vill*/
 .switch {
     position: relative;
     display: inline-block;
