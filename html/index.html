@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/fonts/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <title>Your DiscShoes</title>
+    </head>
+    <body>
+        <div id="grid-container"></div>
+        <header class="main-header">
+            <nav>
+                <ul class="navmenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="produkt.html">Products</a></li>
+                    <li><a href="omoss.html">About us</a></li>
+                </ul>
+                <a href="#" id="logo">Logo</a>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </nav>
+            <section>
+                <h2>What would you like to find?</h2>
+                <a href="#">
+                    <img src="#" alt="">
+                </a>
+            </section>
+        </header>
+        <main>
+            <h1>Disc Golf Shoes</h1>
+            <p>We have all the shoes for the different disc golf experiences you can imagine of having.</p>
+
+            <!--For begge drop downs har jeg funnet noen tips fra w3schools side, kunnet ikke få de å funke helt alene, nå mener jeg den javascript delen i script taggen-->
+            <div class="filter-sort-container">
+                <div class="filter-dropdown">
+                    <label for="filter">Filter by:</label>
+                    <select id="filter" name="filter">
+                        <option value="option1">Gore-Tex</option>
+                        <option value="option2">Trail style</option>
+                        <option value="option3">Barefoot style</option>
+                    </select>
+                </div>
+
+                <div class="sort-dropdown">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort" name="sort">
+                        <!--å få de option value punktene til drop down menus, den måtte jeg tips fra OpenAi, da fikk jeg de valg punktene jeg hadde lyst å ha på siden-->
+                        <option value="option1">Size</option>
+                        <option value="option2">Price</option>
+                        <option value="option3">Availability</option>
+                    </select>
+                </div>
+            </div>
+            <label class="availability-filter">
+                <label class="switch">
+                    <input type="check box" id="availabilityToggle">
+                    <spann class="slider round"></spann>
+                </label>
+                <label class="result-box">
+                    <span id="resultNumber">0</span>
+                </label>
+            </label>
+
+            <section class="illustration">
+                <img src="/img/shoe-629643_1280.jpg" alt="discgolf shoe picture1">
+                <img src="/img/shoe-629644_1280.jpg" alt="discgolf shoe picture2">
+            </section>
+        </main>
+        <footer class="footer-box">
+            <a href="facebook-link" target="_blank"><img src="#" alt="Facebook"></a>
+            <a href="pinterest-link" target="_blank"><img src"#" alt="Pinterest"></a>
+            <a href="omoss.html"></a>
+        </footer>
+        <script>
+            
+
+            document.getElementById('availabilityToggle').addEventListener('change', function() {
+                var resultNumber = document.getElementById('resultNumber');
+                if (this.checked) {
+                    resultNumber.innerText = '100';  
+                } else {
+                    resultNumber.innerText = '0';
+                }
+            });
+        </script>
+    </body>
+</html>
